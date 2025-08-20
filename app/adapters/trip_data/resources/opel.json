@@ -1,0 +1,604 @@
+[
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Adam"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Адам"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Адам"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Agila"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Агіла"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Агила"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Ampera"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Ампера"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Ампера"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Antara"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Антара"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Антара"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Ascona"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Аскона"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Аскона"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Astra F"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Астра Ф"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Астра Ф"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Astra G"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Астра Г"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Астра Г"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Astra H"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Астра Н"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Астра Н"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Astra J"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Астра Джей"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Астра Джей"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Astra K"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Астра К"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Астра К"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Calibra"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Калібра"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Калибра"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Cascada"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Каскада"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Каскада"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Combo B"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Комбо Б"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Комбо Б"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Combo C"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Комбо С"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Комбо С"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Combo D"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Комбо Д"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Комбо Д"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Corsa A"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Корса А"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Корса А"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Corsa B"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Корса Б"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Корса Б"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Corsa C"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Корса С"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Корса С"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Corsa D"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Корса Д"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Корса Д"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Corsa E"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Корса Е"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Корса Е"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Crossland"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Кроссленд"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Кроссленд"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Frontera"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Фронтера"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Фронтера"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Grandland"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Грандленд"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Грандленд"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Insignia"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Інсигнія"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Инсигния"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Kadett"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Кадет"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Кадет"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Karl"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Карл"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Карл"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Meriva A"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Меріва А"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Мерива А"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Meriva B"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Меріва Б"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Мерива Б"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Mokka"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Мокка"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Мокка"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Movano"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Мовано"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Мовано"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Omega A"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Омега А"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Омега А"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Omega B"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Омега Б"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Омега Б"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Signum"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Сігнум"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Сигнум"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Sintra"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Сінтра"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Синтра"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Tigra"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Тігра"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Тигра"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Vectra A"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Вектра А"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Вектра А"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Vectra B"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Вектра Б"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Вектра Б"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Vectra C"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Вектра С"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Вектра С"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Vivaro"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Віваро"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Виваро"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Zafira A"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Зафіра А"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Зафира А"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Zafira B"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Зафіра Б"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Зафира Б"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Zafira C"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Зафіра С"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Зафира С"
+    }
+  },
+  {
+    "en": {
+      "brand": "Opel",
+      "model": "Zafira Life"
+    },
+    "ua": {
+      "brand": "Опель",
+      "model": "Зафіра Лайф"
+    },
+    "ru": {
+      "brand": "Опель",
+      "model": "Зафира Лайф"
+    }
+  }
+]

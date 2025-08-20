@@ -1,0 +1,534 @@
+[
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Captur"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Каптюр"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Каптюр"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Clio 1"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Кліо 1"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Клио 1"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Clio 2"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Кліо 2"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Клио 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Clio 3"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Кліо 3"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Клио 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Clio 4"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Кліо 4"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Клио 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Duster"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Дастер"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Дастер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Espace 3"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Еспейс 3"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Еспейс 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Espace 4"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Еспейс 4"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Еспейс 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Espace 5"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Еспейс 5"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Еспейс 5"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Fluence"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Флюенс"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Флюенс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Grand Scenic"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Гранд Сценік"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Гранд Сценик"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Kadjar"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Каджар"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Каджар"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Kangoo"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Кенго"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Кенго"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Koleos"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Колеос"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Колеос"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Laguna 1"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Лагуна 1"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Лагуна 1"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Laguna 2"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Лагуна 2"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Лагуна 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Laguna 3"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Лагуна 3"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Лагуна 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Lodgy"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Лоджі"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Лоджи"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Logan"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Логан"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Логан"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Master"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Мастер"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Мастер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Megane 1"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Меган 1"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Меган 1"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Megane 2"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Меган 2"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Меган 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Megane 3"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Меган 3"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Меган 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Megane 4"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Меган 4"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Меган 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Megane Scenic"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Меган Сценік"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Меган Сценик"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Modus"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Модус"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Модус"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Sandero"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Сандеро"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Сандеро"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Scenic 1"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Сценік 1"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Сценик 1"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Scenic 2"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Сценік 2"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Сценик 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Scenic 3"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Сценік 3"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Сценик 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Scenic 4"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Сценік 4"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Сценик 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Stepway"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Степвей"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Степвей"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Symbol"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Симбол"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Симбол"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Thalia"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Талія"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Талия"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Trafic"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Трафік"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Трафик"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Twingo"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Твінго"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Твинго"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Vel Satis"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Вель Сатіс"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Вел Сатис"
+    }
+  },
+  {
+    "en": {
+      "brand": "Renault",
+      "model": "Wind"
+    },
+    "ua": {
+      "brand": "Рено",
+      "model": "Вінд"
+    },
+    "ru": {
+      "brand": "Рено",
+      "model": "Винд"
+    }
+  }
+]

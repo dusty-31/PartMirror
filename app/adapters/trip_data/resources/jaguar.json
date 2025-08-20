@@ -1,0 +1,30 @@
+[
+  {
+    "en": {
+      "brand": "Jaguar",
+      "model": "XF"
+    },
+    "ua": {
+      "brand": "Ягуар",
+      "model": "ХФ"
+    },
+    "ru": {
+      "brand": "Ягуар",
+      "model": "ХФ"
+    }
+  },
+  {
+    "en": {
+      "brand": "Jaguar",
+      "model": "X-Type"
+    },
+    "ua": {
+      "brand": "Ягуар",
+      "model": "Х-Тайп"
+    },
+    "ru": {
+      "brand": "Ягуар",
+      "model": "Х-Тайп"
+    }
+  }
+]

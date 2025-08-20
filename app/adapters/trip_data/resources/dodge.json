@@ -1,0 +1,114 @@
+[
+  {
+    "en": {
+      "brand": "Dodge",
+      "model": "Challenger"
+    },
+    "ua": {
+      "brand": "Додж",
+      "model": "Челленджер"
+    },
+    "ru": {
+      "brand": "Додж",
+      "model": "Челленджер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dodge",
+      "model": "Charger"
+    },
+    "ua": {
+      "brand": "Додж",
+      "model": "Чаржер"
+    },
+    "ru": {
+      "brand": "Додж",
+      "model": "Чарджер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dodge",
+      "model": "Durango"
+    },
+    "ua": {
+      "brand": "Додж",
+      "model": "Дуранго"
+    },
+    "ru": {
+      "brand": "Додж",
+      "model": "Дуранго"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dodge",
+      "model": "Grand Caravan"
+    },
+    "ua": {
+      "brand": "Додж",
+      "model": "Гранд Караван"
+    },
+    "ru": {
+      "brand": "Додж",
+      "model": "Гранд Караван"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dodge",
+      "model": "Journey"
+    },
+    "ua": {
+      "brand": "Додж",
+      "model": "Джорні"
+    },
+    "ru": {
+      "brand": "Додж",
+      "model": "Джорни"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dodge",
+      "model": "Neon"
+    },
+    "ua": {
+      "brand": "Додж",
+      "model": "Неон"
+    },
+    "ru": {
+      "brand": "Додж",
+      "model": "Неон"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dodge",
+      "model": "Nitro"
+    },
+    "ua": {
+      "brand": "Додж",
+      "model": "Нітро"
+    },
+    "ru": {
+      "brand": "Додж",
+      "model": "Нитро"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dodge",
+      "model": "Ram"
+    },
+    "ua": {
+      "brand": "Додж",
+      "model": "Рам"
+    },
+    "ru": {
+      "brand": "Додж",
+      "model": "Рам"
+    }
+  }
+]

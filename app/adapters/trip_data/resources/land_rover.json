@@ -1,0 +1,100 @@
+[
+  {
+    "en": {
+      "brand": "Land Rover",
+      "model": "Defender"
+    },
+    "ua": {
+      "brand": "Ленд Ровер",
+      "model": "Дефендер"
+    },
+    "ru": {
+      "brand": "Ленд Ровер",
+      "model": "Дефендер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Land Rover",
+      "model": "Discovery"
+    },
+    "ua": {
+      "brand": "Ленд Ровер",
+      "model": "Діскавері"
+    },
+    "ru": {
+      "brand": "Ленд Ровер",
+      "model": "Дискавери"
+    }
+  },
+  {
+    "en": {
+      "brand": "Land Rover",
+      "model": "Evoque"
+    },
+    "ua": {
+      "brand": "Ленд Ровер",
+      "model": "Евок"
+    },
+    "ru": {
+      "brand": "Ленд Ровер",
+      "model": "Евок"
+    }
+  },
+  {
+    "en": {
+      "brand": "Land Rover",
+      "model": "Freelander"
+    },
+    "ua": {
+      "brand": "Ленд Ровер",
+      "model": "Фрілендер"
+    },
+    "ru": {
+      "brand": "Ленд Ровер",
+      "model": "Фрилендер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Land Rover",
+      "model": "Range Rover"
+    },
+    "ua": {
+      "brand": "Ленд Ровер",
+      "model": "Рендж Ровер"
+    },
+    "ru": {
+      "brand": "Ленд Ровер",
+      "model": "Рендж Ровер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Land Rover",
+      "model": "Sport"
+    },
+    "ua": {
+      "brand": "Ленд Ровер",
+      "model": "Спорт"
+    },
+    "ru": {
+      "brand": "Ленд Ровер",
+      "model": "Спорт"
+    }
+  },
+  {
+    "en": {
+      "brand": "Land Rover",
+      "model": "Vogue"
+    },
+    "ua": {
+      "brand": "Ленд Ровер",
+      "model": "Вог"
+    },
+    "ru": {
+      "brand": "Ленд Ровер",
+      "model": "Вог"
+    }
+  }
+]

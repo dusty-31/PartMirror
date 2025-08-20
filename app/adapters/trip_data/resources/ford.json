@@ -1,0 +1,394 @@
+[
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "B-Max"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Б-Макс"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Б-Макс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "C-Max"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Ц-Макс"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Ц-Макс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Edge"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Едж"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Едж"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Escort"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Ескорт"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Эскорт"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Explorer"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Експлорер"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Эксплорер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Fiesta 2"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фієста 2"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фиеста 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Fiesta 3"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фієста 3"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фиеста 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Fiesta 4"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фієста 4"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фиеста 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Fiesta 5"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фієста 5"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фиеста 5"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Fiesta 6"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фієста 6"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фиеста 6"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Fiesta 7"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фієста 7"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фиеста 7"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Fiesta 8"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фієста 8"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фиеста 8"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "F-Max"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Ф-Макс"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Ф-Макс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Focus 1"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фокус 1"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фокус 1"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Focus 2"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фокус 2"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фокус 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Focus 3"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фокус 3"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фокус 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Focus 4"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фокус 4"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фокус 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Fusion"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Фьюжн"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Фьюжн"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Galaxy"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Гелексі"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Гелекси"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Kuga"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Куга"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Куга"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Mondeo 1"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Мондео 1"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Мондео 1"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Mondeo 2"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Мондео 2"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Мондео 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Mondeo 3"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Мондео 3"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Мондео 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Mondeo 4"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Мондео 4"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Мондео 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Mondeo 5"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Мондео 5"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Мондео 5"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "S-Max"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Ес-Макс"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Ес-Макс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Tourneo"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Турнео"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Турнео"
+    }
+  },
+  {
+    "en": {
+      "brand": "Ford",
+      "model": "Transit"
+    },
+    "ua": {
+      "brand": "Форд",
+      "model": "Транзіт"
+    },
+    "ru": {
+      "brand": "Форд",
+      "model": "Транзит"
+    }
+  }
+]

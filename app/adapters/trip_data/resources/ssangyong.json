@@ -1,0 +1,72 @@
+[
+  {
+    "en": {
+      "brand": "SsangYong",
+      "model": "Actyon"
+    },
+    "ua": {
+      "brand": "СангЙонг",
+      "model": "Актион"
+    },
+    "ru": {
+      "brand": "СангЙонг",
+      "model": "Актион"
+    }
+  },
+  {
+    "en": {
+      "brand": "SsangYong",
+      "model": "Korando"
+    },
+    "ua": {
+      "brand": "СангЙонг",
+      "model": "Корандо"
+    },
+    "ru": {
+      "brand": "СангЙонг",
+      "model": "Корандо"
+    }
+  },
+  {
+    "en": {
+      "brand": "SsangYong",
+      "model": "Kyron"
+    },
+    "ua": {
+      "brand": "СангЙонг",
+      "model": "Кайрон"
+    },
+    "ru": {
+      "brand": "СангЙонг",
+      "model": "Кайрон"
+    }
+  },
+  {
+    "en": {
+      "brand": "SsangYong",
+      "model": "Rexton"
+    },
+    "ua": {
+      "brand": "СангЙонг",
+      "model": "Рекстон"
+    },
+    "ru": {
+      "brand": "СангЙонг",
+      "model": "Рекстон"
+    }
+  },
+  {
+    "en": {
+      "brand": "SsangYong",
+      "model": "Rodius"
+    },
+    "ua": {
+      "brand": "СангЙонг",
+      "model": "Родіус"
+    },
+    "ru": {
+      "brand": "СангЙонг",
+      "model": "Родиус"
+    }
+  }
+]

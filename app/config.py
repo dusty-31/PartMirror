@@ -5,6 +5,10 @@ from dataclasses import dataclass
 class AppConfig:
     excel_file: str = "data.xlsx"
     sheet_name: str = "Sheet1"
+
+    # True, if you want to use resources json files
+    use_resource_triplets: bool = True
+
     cars_triplets_path: str = "cars.json"
     compatibility_map_path: str = "cars_eng.json"
 

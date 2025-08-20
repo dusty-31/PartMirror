@@ -1,0 +1,114 @@
+[
+  {
+    "en": {
+      "brand": "Mitsubishi",
+      "model": "Carisma"
+    },
+    "ua": {
+      "brand": "Міцубісі",
+      "model": "Карізма"
+    },
+    "ru": {
+      "brand": "Мицубиси",
+      "model": "Каризма"
+    }
+  },
+  {
+    "en": {
+      "brand": "Mitsubishi",
+      "model": "Colt"
+    },
+    "ua": {
+      "brand": "Міцубісі",
+      "model": "Кольт"
+    },
+    "ru": {
+      "brand": "Мицубиси",
+      "model": "Кольт"
+    }
+  },
+  {
+    "en": {
+      "brand": "Mitsubishi",
+      "model": "Galant"
+    },
+    "ua": {
+      "brand": "Міцубісі",
+      "model": "Галант"
+    },
+    "ru": {
+      "brand": "Мицубиси",
+      "model": "Галант"
+    }
+  },
+  {
+    "en": {
+      "brand": "Mitsubishi",
+      "model": "Grandis"
+    },
+    "ua": {
+      "brand": "Міцубісі",
+      "model": "Грандіс"
+    },
+    "ru": {
+      "brand": "Мицубиси",
+      "model": "Грандис"
+    }
+  },
+  {
+    "en": {
+      "brand": "Mitsubishi",
+      "model": "L200"
+    },
+    "ua": {
+      "brand": "Міцубісі",
+      "model": "Л200"
+    },
+    "ru": {
+      "brand": "Мицубиси",
+      "model": "Л200"
+    }
+  },
+  {
+    "en": {
+      "brand": "Mitsubishi",
+      "model": "Lancer"
+    },
+    "ua": {
+      "brand": "Міцубісі",
+      "model": "Лансер"
+    },
+    "ru": {
+      "brand": "Мицубиси",
+      "model": "Лансер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Mitsubishi",
+      "model": "Outlander"
+    },
+    "ua": {
+      "brand": "Міцубісі",
+      "model": "Аутлендер"
+    },
+    "ru": {
+      "brand": "Мицубиси",
+      "model": "Аутлендер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Mitsubishi",
+      "model": "Pajero"
+    },
+    "ua": {
+      "brand": "Міцубісі",
+      "model": "Паджеро"
+    },
+    "ru": {
+      "brand": "Мицубиси",
+      "model": "Паджеро"
+    }
+  }
+]

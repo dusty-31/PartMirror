@@ -1,0 +1,86 @@
+[
+  {
+    "en": {
+      "brand": "Porsche",
+      "model": "911"
+    },
+    "ua": {
+      "brand": "Порше",
+      "model": "911"
+    },
+    "ru": {
+      "brand": "Порше",
+      "model": "911"
+    }
+  },
+  {
+    "en": {
+      "brand": "Porsche",
+      "model": "Boxter"
+    },
+    "ua": {
+      "brand": "Порше",
+      "model": "Бокстер"
+    },
+    "ru": {
+      "brand": "Порше",
+      "model": "Бокстер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Porsche",
+      "model": "Cayenne"
+    },
+    "ua": {
+      "brand": "Порше",
+      "model": "Кайєн"
+    },
+    "ru": {
+      "brand": "Порше",
+      "model": "Кайен"
+    }
+  },
+  {
+    "en": {
+      "brand": "Porsche",
+      "model": "Cayman"
+    },
+    "ua": {
+      "brand": "Порше",
+      "model": "Кайман"
+    },
+    "ru": {
+      "brand": "Порше",
+      "model": "Кайман"
+    }
+  },
+  {
+    "en": {
+      "brand": "Porsche",
+      "model": "Macan"
+    },
+    "ua": {
+      "brand": "Порше",
+      "model": "Макан"
+    },
+    "ru": {
+      "brand": "Порше",
+      "model": "Макан"
+    }
+  },
+  {
+    "en": {
+      "brand": "Porsche",
+      "model": "Panamera"
+    },
+    "ua": {
+      "brand": "Порше",
+      "model": "Панамера"
+    },
+    "ru": {
+      "brand": "Порше",
+      "model": "Панамера"
+    }
+  }
+]

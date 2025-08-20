@@ -1,0 +1,30 @@
+[
+  {
+    "en": {
+      "brand": "Smart",
+      "model": "Forfour"
+    },
+    "ua": {
+      "brand": "Смарт",
+      "model": "Форфор"
+    },
+    "ru": {
+      "brand": "Смарт",
+      "model": "Форфор"
+    }
+  },
+  {
+    "en": {
+      "brand": "Smart",
+      "model": "Fortwo"
+    },
+    "ua": {
+      "brand": "Смарт",
+      "model": "Форту"
+    },
+    "ru": {
+      "brand": "Смарт",
+      "model": "Форту"
+    }
+  }
+]

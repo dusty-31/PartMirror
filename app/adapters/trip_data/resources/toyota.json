@@ -1,0 +1,380 @@
+[
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "4Runner"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "4Раннер"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "4Раннер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Auris"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Ауріс"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Аурис"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Avalon"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Авалон"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Авалон"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Avensis"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Авенсіс"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Авенсис"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Aygo"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Айго"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Айго"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Camry"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Камрі"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Камри"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Celica"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Селіка"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Селика"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Corolla"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Королла"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Королла"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Hiace"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Хайс"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Хайс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Highlander"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Хайлендер"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Хайлендер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Hilux"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Хайлюкс"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Хайлюкс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Land Cruiser"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Ленд Крузер"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Ленд Крузер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Land Cruiser Prado"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Ленд Крузер Прадо"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Ленд Крузер Прадо"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Picnic"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Пікнік"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Пикник"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Previa"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Превія"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Превия"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Prius"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Пріус"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Приус"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Rav 4"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Рав 4"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Рав 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Rav 5"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Рав 5"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Рав 5"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Rav 6"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Рав 6"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Рав 6"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Rav 7"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Рав 7"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Рав 7"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Sequoia"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Секвоя"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Секвоя"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Sienna"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Сієна"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Сиена"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Solara"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Солара"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Солара"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Tacoma"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Такома"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Такома"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Tundra"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Тундра"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Тундра"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Verso"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Версо"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Версо"
+    }
+  },
+  {
+    "en": {
+      "brand": "Toyota",
+      "model": "Yaris"
+    },
+    "ua": {
+      "brand": "Тойота",
+      "model": "Яріс"
+    },
+    "ru": {
+      "brand": "Тойота",
+      "model": "Ярис"
+    }
+  }
+]
