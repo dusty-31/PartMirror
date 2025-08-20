@@ -1,0 +1,58 @@
+[
+  {
+    "en": {
+      "brand": "Suzuki",
+      "model": "Grand Vitara"
+    },
+    "ua": {
+      "brand": "Сузукі",
+      "model": "Гранд Вітара"
+    },
+    "ru": {
+      "brand": "Сузуки",
+      "model": "Гранд Витара"
+    }
+  },
+  {
+    "en": {
+      "brand": "Suzuki",
+      "model": "Ignis"
+    },
+    "ua": {
+      "brand": "Сузукі",
+      "model": "Ігніс"
+    },
+    "ru": {
+      "brand": "Сузуки",
+      "model": "Игнис"
+    }
+  },
+  {
+    "en": {
+      "brand": "Suzuki",
+      "model": "Swift"
+    },
+    "ua": {
+      "brand": "Сузукі",
+      "model": "Свіфт"
+    },
+    "ru": {
+      "brand": "Сузуки",
+      "model": "Свифт"
+    }
+  },
+  {
+    "en": {
+      "brand": "Suzuki",
+      "model": "SX4"
+    },
+    "ua": {
+      "brand": "Сузукі",
+      "model": "СХ4"
+    },
+    "ru": {
+      "brand": "Сузуки",
+      "model": "СХ4"
+    }
+  }
+]

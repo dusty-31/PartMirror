@@ -1,0 +1,44 @@
+[
+  {
+    "en": {
+      "brand": "Subaru",
+      "model": "Forester"
+    },
+    "ua": {
+      "brand": "Субару",
+      "model": "Форестер"
+    },
+    "ru": {
+      "brand": "Субару",
+      "model": "Форестер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Subaru",
+      "model": "Impreza"
+    },
+    "ua": {
+      "brand": "Субару",
+      "model": "Імпреза"
+    },
+    "ru": {
+      "brand": "Субару",
+      "model": "Импреза"
+    }
+  },
+  {
+    "en": {
+      "brand": "Subaru",
+      "model": "Legacy"
+    },
+    "ua": {
+      "brand": "Субару",
+      "model": "Легасі"
+    },
+    "ru": {
+      "brand": "Субару",
+      "model": "Легаси"
+    }
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "en": {
+      "brand": "Dacia",
+      "model": "Dokker"
+    },
+    "ua": {
+      "brand": "Дачія",
+      "model": "Доккер"
+    },
+    "ru": {
+      "brand": "Дачия",
+      "model": "Доккер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dacia",
+      "model": "Duster"
+    },
+    "ua": {
+      "brand": "Дачія",
+      "model": "Дастер"
+    },
+    "ru": {
+      "brand": "Дачия",
+      "model": "Дастер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dacia",
+      "model": "Lodgy"
+    },
+    "ua": {
+      "brand": "Дачія",
+      "model": "Лоджі"
+    },
+    "ru": {
+      "brand": "Дачия",
+      "model": "Лоджи"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dacia",
+      "model": "Logan"
+    },
+    "ua": {
+      "brand": "Дачія",
+      "model": "Логан"
+    },
+    "ru": {
+      "brand": "Дачия",
+      "model": "Логан"
+    }
+  },
+  {
+    "en": {
+      "brand": "Dacia",
+      "model": "Sandero"
+    },
+    "ua": {
+      "brand": "Дачія",
+      "model": "Сандеро"
+    },
+    "ru": {
+      "brand": "Дачия",
+      "model": "Сандеро"
+    }
+  }
+]

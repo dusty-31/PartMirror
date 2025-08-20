@@ -1,0 +1,100 @@
+[
+  {
+    "en": {
+      "brand": "Honda",
+      "model": "Accord"
+    },
+    "ua": {
+      "brand": "Хонда",
+      "model": "Акорд"
+    },
+    "ru": {
+      "brand": "Хонда",
+      "model": "Акорд"
+    }
+  },
+  {
+    "en": {
+      "brand": "Honda",
+      "model": "Civic"
+    },
+    "ua": {
+      "brand": "Хонда",
+      "model": "Сівік"
+    },
+    "ru": {
+      "brand": "Хонда",
+      "model": "Сивик"
+    }
+  },
+  {
+    "en": {
+      "brand": "Honda",
+      "model": "CR-V"
+    },
+    "ua": {
+      "brand": "Хонда",
+      "model": "СР-В"
+    },
+    "ru": {
+      "brand": "Хонда",
+      "model": "СР-В"
+    }
+  },
+  {
+    "en": {
+      "brand": "Honda",
+      "model": "Element"
+    },
+    "ua": {
+      "brand": "Хонда",
+      "model": "Елемент"
+    },
+    "ru": {
+      "brand": "Хонда",
+      "model": "Елемент"
+    }
+  },
+  {
+    "en": {
+      "brand": "Honda",
+      "model": "Jazz"
+    },
+    "ua": {
+      "brand": "Хонда",
+      "model": "Джаз"
+    },
+    "ru": {
+      "brand": "Хонда",
+      "model": "Джаз"
+    }
+  },
+  {
+    "en": {
+      "brand": "Honda",
+      "model": "Odyssey"
+    },
+    "ua": {
+      "brand": "Хонда",
+      "model": "Одіссей"
+    },
+    "ru": {
+      "brand": "Хонда",
+      "model": "Одиссей"
+    }
+  },
+  {
+    "en": {
+      "brand": "Honda",
+      "model": "Pilot"
+    },
+    "ua": {
+      "brand": "Хонда",
+      "model": "Пілот"
+    },
+    "ru": {
+      "brand": "Хонда",
+      "model": "Пилот"
+    }
+  }
+]

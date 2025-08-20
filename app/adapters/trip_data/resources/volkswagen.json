@@ -1,0 +1,786 @@
+[
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Amarok"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Амарок"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Амарок"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Arteon"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Артеон"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Артеон"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Atlas"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Атлас"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Атлас"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Beetle"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Бітл"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Битл"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Bora"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Бора"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Бора"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Caddy 2"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Кадді 2"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Кадди 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Caddy 3"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Кадді 3"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Кадди 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Caddy 4"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Кадді 4"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Кадди 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Caddy 5"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Кадді 5"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Кадди 5"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Caddy Alltrack"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Кадді Оллтрек"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Кадди Оллтрек"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Crafter"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Крафтер"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Крафтер"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Eos"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Еос"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Еос"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Fox"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Фокс"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Фокс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Golf 2"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Гольф 2"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Гольф 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Golf 3"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Гольф 3"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Гольф 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Golf 4"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Гольф 4"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Гольф 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Golf 5"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Гольф 5"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Гольф 5"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Golf Plus"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Гольф Плюс"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Гольф Плюс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Golf 6"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Гольф 6"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Гольф 6"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Golf 7"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Гольф 7"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Гольф 7"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Golf 8"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Гольф 8"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Гольф 8"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "ID3"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "ІД3"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "ИД3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "ID4"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "ІД4"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "ИД4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Jetta 2"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Джетта 2"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Джетта 2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Jetta 3"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Джетта 3"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Джетта 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Jetta 4"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Джетта 4"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Джетта 4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Jetta 5"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Джетта 5"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Джетта 5"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Jetta 6"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Джетта 6"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Джетта 6"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "LT"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "ЛТ"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "ЛТ"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Lupo"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Лупо"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Лупо"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "New Beetle"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Ню Бітл"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Ню Битл"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Passat B2"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б2"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Passat B3"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б3"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Passat B4"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б4"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Passat B5"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б5"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б5"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Passat B5+"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б5+"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б5+"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Passat B6"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б6"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б6"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Passat B7"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б7"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б7"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Passat B8"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б8"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Пассат Б8"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Passat CC"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Пассат СС"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Пассат СС"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Phaeton"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Фаетон"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Фаетон"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Polo"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Поло"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Поло"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Scirocco"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Сірокко"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Сирокко"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Sharan"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Шаран"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Шаран"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "T-Cross"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Т-Крос"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Т-Кросс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Tiguan"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Тігуан"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Тигуан"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Touareg"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Туарег"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Туарег"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Touran"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Туран"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Туран"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Transporter T2"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т2"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т2"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Transporter T3"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т3"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Transporter T4"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т4"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т4"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Transporter T5"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т5"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т5"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Transporter T6"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т6"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Транспортер Т6"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "T-roc"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Т-рок"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Т-рок"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Up"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Ап"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Ап"
+    }
+  },
+  {
+    "en": {
+      "brand": "Volkswagen",
+      "model": "Vento"
+    },
+    "ua": {
+      "brand": "Фольксваген",
+      "model": "Венто"
+    },
+    "ru": {
+      "brand": "Фольксваген",
+      "model": "Венто"
+    }
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "en": {
+      "brand": "Daewoo",
+      "model": "Espero"
+    },
+    "ua": {
+      "brand": "Део",
+      "model": "Есперо"
+    },
+    "ru": {
+      "brand": "Део",
+      "model": "Есперо"
+    }
+  },
+  {
+    "en": {
+      "brand": "Daewoo",
+      "model": "Lanos"
+    },
+    "ua": {
+      "brand": "Део",
+      "model": "Ланос"
+    },
+    "ru": {
+      "brand": "Део",
+      "model": "Ланос"
+    }
+  },
+  {
+    "en": {
+      "brand": "Daewoo",
+      "model": "Matiz"
+    },
+    "ua": {
+      "brand": "Део",
+      "model": "Матіз"
+    },
+    "ru": {
+      "brand": "Део",
+      "model": "Матиз"
+    }
+  },
+  {
+    "en": {
+      "brand": "Daewoo",
+      "model": "Nexia"
+    },
+    "ua": {
+      "brand": "Део",
+      "model": "Нексия"
+    },
+    "ru": {
+      "brand": "Део",
+      "model": "Нексия"
+    }
+  },
+  {
+    "en": {
+      "brand": "Daewoo",
+      "model": "Nubira"
+    },
+    "ua": {
+      "brand": "Део",
+      "model": "Нубіра"
+    },
+    "ru": {
+      "brand": "Део",
+      "model": "Нубира"
+    }
+  }
+]

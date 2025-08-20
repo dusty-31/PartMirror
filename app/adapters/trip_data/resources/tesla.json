@@ -1,0 +1,58 @@
+[
+  {
+    "en": {
+      "brand": "Tesla",
+      "model": "Model 3"
+    },
+    "ua": {
+      "brand": "Тесла",
+      "model": "Модел 3"
+    },
+    "ru": {
+      "brand": "Тесла",
+      "model": "Модел 3"
+    }
+  },
+  {
+    "en": {
+      "brand": "Tesla",
+      "model": "Model S"
+    },
+    "ua": {
+      "brand": "Тесла",
+      "model": "Модел Ес"
+    },
+    "ru": {
+      "brand": "Тесла",
+      "model": "Модел Ес"
+    }
+  },
+  {
+    "en": {
+      "brand": "Tesla",
+      "model": "Model X"
+    },
+    "ua": {
+      "brand": "Тесла",
+      "model": "Модел Х"
+    },
+    "ru": {
+      "brand": "Тесла",
+      "model": "Модел Х"
+    }
+  },
+  {
+    "en": {
+      "brand": "Tesla",
+      "model": "Model Y"
+    },
+    "ua": {
+      "brand": "Тесла",
+      "model": "Модел Уай"
+    },
+    "ru": {
+      "brand": "Тесла",
+      "model": "Модел Уай"
+    }
+  }
+]

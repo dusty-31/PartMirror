@@ -1,0 +1,100 @@
+[
+  {
+    "en": {
+      "brand": "Lexus",
+      "model": "ES"
+    },
+    "ua": {
+      "brand": "Лексус",
+      "model": "Ес"
+    },
+    "ru": {
+      "brand": "Лексус",
+      "model": "Ес"
+    }
+  },
+  {
+    "en": {
+      "brand": "Lexus",
+      "model": "GS"
+    },
+    "ua": {
+      "brand": "Лексус",
+      "model": "Гс"
+    },
+    "ru": {
+      "brand": "Лексус",
+      "model": "Гс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Lexus",
+      "model": "GX"
+    },
+    "ua": {
+      "brand": "Лексус",
+      "model": "Гх"
+    },
+    "ru": {
+      "brand": "Лексус",
+      "model": "Гх"
+    }
+  },
+  {
+    "en": {
+      "brand": "Lexus",
+      "model": "IS"
+    },
+    "ua": {
+      "brand": "Лексус",
+      "model": "Іс"
+    },
+    "ru": {
+      "brand": "Лексус",
+      "model": "Ис"
+    }
+  },
+  {
+    "en": {
+      "brand": "Lexus",
+      "model": "LS"
+    },
+    "ua": {
+      "brand": "Лексус",
+      "model": "Лс"
+    },
+    "ru": {
+      "brand": "Лексус",
+      "model": "Лс"
+    }
+  },
+  {
+    "en": {
+      "brand": "Lexus",
+      "model": "LX"
+    },
+    "ua": {
+      "brand": "Лексус",
+      "model": "Лх"
+    },
+    "ru": {
+      "brand": "Лексус",
+      "model": "Лх"
+    }
+  },
+  {
+    "en": {
+      "brand": "Lexus",
+      "model": "RX"
+    },
+    "ua": {
+      "brand": "Лексус",
+      "model": "Рх"
+    },
+    "ru": {
+      "brand": "Лексус",
+      "model": "Рх"
+    }
+  }
+]

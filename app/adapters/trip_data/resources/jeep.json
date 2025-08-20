@@ -1,0 +1,58 @@
+[
+  {
+    "en": {
+      "brand": "Jeep",
+      "model": "Cherokee"
+    },
+    "ua": {
+      "brand": "Джип",
+      "model": "Черокі"
+    },
+    "ru": {
+      "brand": "Джип",
+      "model": "Чероки"
+    }
+  },
+  {
+    "en": {
+      "brand": "Jeep",
+      "model": "Grand Cherokee"
+    },
+    "ua": {
+      "brand": "Джип",
+      "model": "Гранд Черокі"
+    },
+    "ru": {
+      "brand": "Джип",
+      "model": "Гранд Чероки"
+    }
+  },
+  {
+    "en": {
+      "brand": "Jeep",
+      "model": "Liberty"
+    },
+    "ua": {
+      "brand": "Джип",
+      "model": "Ліберті"
+    },
+    "ru": {
+      "brand": "Джип",
+      "model": "Либерти"
+    }
+  },
+  {
+    "en": {
+      "brand": "Jeep",
+      "model": "Wrangler"
+    },
+    "ua": {
+      "brand": "Джип",
+      "model": "Ренглер"
+    },
+    "ru": {
+      "brand": "Джип",
+      "model": "Ренглер"
+    }
+  }
+]
