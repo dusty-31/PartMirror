@@ -1,0 +1,1 @@
+from .resource_trip_data_provider import ResourceTripDataProvider
