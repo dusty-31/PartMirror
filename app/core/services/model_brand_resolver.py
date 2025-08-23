@@ -2,6 +2,8 @@ from dataclasses import dataclass
 from typing import Optional
 import re
 
+from app.config import ALLOWED_LANGUAGES
+
 
 @dataclass(frozen=True)
 class _TripRef:
@@ -22,27 +24,27 @@ class ModelBrandResolver:
             tokens = [token for token in re.split(r"[\s.\-_/]+", model) if token]
             if not tokens:
                 return None
-            b = tokens[0]
-            if len(b) < 2 and not any(ch.isdigit() for ch in b):
+            base_key = tokens[0]
+            if len(base_key) < 2 and not any(ch.isdigit() for ch in base_key):
                 return None
-            return b.lower()
+            return base_key.lower()
 
-        for t in triplets_raw:
-            brands = {t["ua"]["brand"].lower(), t["ru"]["brand"].lower(), t["en"]["brand"].lower()}
-            ref = _TripRef(trip=t, brands_lower=brands)
+        for triplet in triplets_raw:
+            brands = {triplet["ua"]["brand"].lower(), triplet["ru"]["brand"].lower(), triplet["en"]["brand"].lower()}
+            ref = _TripRef(trip=triplet, brands_lower=brands)
 
-            for lang in ("ua", "ru", "en"):
-                m = t[lang]["model"]
-                if not m:
+            for lang in ALLOWED_LANGUAGES:
+                model_value = triplet[lang]["model"]
+                if not model_value:
                     continue
-                key = norm(m)
+                key = norm(model_value)
                 self._full_map.setdefault(key, []).append(ref)
 
-                b = base_token(m)
-                if b:
-                    self._base_map.setdefault(b, []).append(ref)
+                base_key = base_token(model_value)
+                if base_key:
+                    self._base_map.setdefault(base_key, []).append(ref)
 
-    def resolve(self, model_str: str, prefer_brand: Optional[str] = None) -> Optional[dict]:
+    def resolve(self, model_str: str, prefer_brand: Optional[str] = None, *, allow_base_fallback: bool = True,) -> Optional[dict]:
         """
         Resolve the model string to a triplet dictionary.
         """
@@ -53,18 +55,19 @@ class ModelBrandResolver:
             if not candidates:
                 return None
             if prefer_brand:
-                pb = prefer_brand.strip().lower()
+                pb_lower = prefer_brand.strip().lower()
                 for ref in candidates:
-                    if pb in ref.brands_lower:
+                    if pb_lower in ref.brands_lower:
                         return ref.trip
             return candidates[0].trip
 
         key_full = " ".join(str(model_str).strip().lower().split())
-        trip = pick(self._full_map.get(key_full, []))
-        if trip:
-            return trip
 
-        tokens = [t for t in re.split(r"[\s.\-_/]+", key_full) if t]
+        resolved = pick(self._full_map.get(key_full, []))
+        if resolved or not allow_base_fallback:
+            return resolved
+
+        tokens = [token for token in re.split(r"[\s.\-_/]+", key_full) if token]
         base = tokens[0] if tokens else None
         if base:
             return pick(self._base_map.get(base, []))

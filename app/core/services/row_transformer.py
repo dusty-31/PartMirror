@@ -40,19 +40,19 @@ def _replace_pair_once(
 ) -> str:
     if not text:
         return text
-    for lang in ALLOWED_LANGUAGES:
-        rx_bm, rx_mb = patterns[lang]
-        m = rx_bm.search(text)
+    for language in ALLOWED_LANGUAGES:
+        regex_brand_model, regex_model_brand = patterns[language]
+        match = regex_brand_model.search(text)
         order = "bm"
-        if not m:
-            m = rx_mb.search(text)
+        if not match:
+            match = regex_model_brand.search(text)
             order = "mb"
-        if not m:
+        if not match:
             continue
-        sep = m.groupdict().get("sep") or " "
+        sep = match.groupdict().get("sep") or " "
         repl = f"{dst_brand}{sep}{dst_model}" if not (
                 order == "mb" and not force_brand_first) else f"{dst_model}{sep}{dst_brand}"
-        return text[:m.start()] + repl + text[m.end():]
+        return text[:match.start()] + repl + text[match.end():]
     return text
 
 
@@ -60,16 +60,16 @@ def _build_keyword_union_patterns(triplets: list[dict]):
     by_lang_full: dict[str, set[str]] = {"ua": set(), "ru": set(), "en": set()}
     by_lang_base: dict[str, set[str]] = {"ua": set(), "ru": set(), "en": set()}
 
-    for t in triplets:
-        for lang in ALLOWED_LANGUAGES:
-            model = str(t[lang]["model"]).strip()
+    for triplet in triplets:
+        for language in ALLOWED_LANGUAGES:
+            model = str(triplet[language]["model"]).strip()
             if model:
-                by_lang_full[lang].add(token_to_regex(model))
+                by_lang_full[language].add(token_to_regex(model))
             tokens = split_model_tokens(model)
             if tokens:
                 base = tokens[0]
                 if len(base) >= 2 or any(ch.isdigit() for ch in base):
-                    by_lang_base[lang].add(token_to_regex(base))
+                    by_lang_base[language].add(token_to_regex(base))
 
     def _compile_union(parts: set[str]) -> Optional[re.Pattern]:
         if not parts:
@@ -77,21 +77,21 @@ def _build_keyword_union_patterns(triplets: list[dict]):
         union = "(?:" + "|".join(sorted(parts)) + ")"
         return re.compile(r"(?<!\w)" + union + r"(?!\w)", flags=re.IGNORECASE | re.UNICODE)
 
-    full_rx = {lang: _compile_union(parts) for lang, parts in by_lang_full.items()}
-    base_rx = {lang: _compile_union(parts) for lang, parts in by_lang_base.items()}
-    return full_rx, base_rx
+    full_pattern = {lang: _compile_union(parts) for lang, parts in by_lang_full.items()}
+    base_pattern = {lang: _compile_union(parts) for lang, parts in by_lang_base.items()}
+    return full_pattern, base_pattern
 
 
 class _KeywordNormalizer:
-    _CYR = re.compile(r"[А-Яа-яЁёІіЇїЄєҐґ]")
+    _CYRILLIC_RANGE = re.compile(r"[А-Яа-яЁёІіЇїЄєҐґ]")
 
     def __init__(self, trip_index_raw: dict, triplets_raw: list[dict]) -> None:
-        self._trip_idx = trip_index_raw
-        self._full_rx_by_lang, self._base_rx_by_lang = _build_keyword_union_patterns(triplets_raw)
+        self._trip_index_raw = trip_index_raw
+        self._full_pattern_by_language, self._base_pattern_by_language = _build_keyword_union_patterns(triplets_raw)
 
     @staticmethod
-    def _has_cyr(s: str) -> bool:
-        return bool(_KeywordNormalizer._CYR.search(s))
+    def _contains_cyrillic(text: str) -> bool:
+        return bool(_KeywordNormalizer._CYRILLIC_RANGE.search(text))
 
     @staticmethod
     def _truncate_join(parts: list[str], limit: int, sep: str = ", ") -> str:
@@ -131,7 +131,7 @@ class _KeywordNormalizer:
         if not raw_str:
             return row
 
-        t_dst = self._trip_idx.get((str(dst_brand).lower(), str(dst_model).lower()))
+        t_dst = self._trip_index_raw.get((str(dst_brand).lower(), str(dst_model).lower()))
         if not t_dst:
             return row
 
@@ -139,11 +139,11 @@ class _KeywordNormalizer:
         out, seen = [], set()
 
         for p in parts:
-            target_lang = cyrillic_lang if self._has_cyr(p) else "en"
+            target_lang = cyrillic_lang if self._contains_cyrillic(p) else "en"
             dst_model_str = t_dst[target_lang]["model"]
 
-            rx_full = self._full_rx_by_lang.get(target_lang)
-            rx_base = self._base_rx_by_lang.get(target_lang)
+            rx_full = self._full_pattern_by_language.get(target_lang)
+            rx_base = self._base_pattern_by_language.get(target_lang)
 
             new_p = p
             changed = False

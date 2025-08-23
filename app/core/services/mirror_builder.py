@@ -38,21 +38,21 @@ class MirrorBuilder:
 
         # Creating mirrors rows
         for model in dedupe_models(raw_compat):
-            dst_trip = self._resolver.resolve(model)
-            if not dst_trip:
+            resolved_triplet = self._resolver.resolve(model, allow_base_fallback=False)
+            if not resolved_triplet:
                 continue
 
-            dst_brand = dst_trip["en"]["brand"]
-            dst_model = dst_trip["en"]["model"]
+            target_brand = resolved_triplet["en"]["brand"]
+            target_model = resolved_triplet["en"]["model"]
 
-            if same_pair(dst_brand, dst_model, current_brand, current_model):
+            if same_pair(target_brand, target_model, current_brand, current_model):
                 continue
 
             new_row = row.copy()
-            new_row["Марка"] = dst_brand
-            new_row["Модель"] = dst_model
+            new_row["Марка"] = target_brand
+            new_row["Модель"] = target_model
             if "Категория_BAS" in new_row:
-                new_row["Категория_BAS"] = dst_model
+                new_row["Категория_BAS"] = target_model
 
             new_row["Тип_записи"] = "Дзеркало"
             if "Артикул" in new_row:
@@ -64,7 +64,7 @@ class MirrorBuilder:
                 new_row,
                 src_brand=current_brand,
                 src_model=current_model,
-                dst_pair=dst_trip,
+                dst_pair=resolved_triplet,
             )
             result.append(new_row)
 
