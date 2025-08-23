@@ -3,15 +3,21 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class AppConfig:
-    excel_file: str = "data.xlsx"
+    excel_file: str = "../test.xlsx"
     sheet_name: str = "Sheet1"
 
     # True, if you want to use resources json files
     use_resource_triplets: bool = True
 
-    cars_triplets_path: str = "cars.json"
-    compatibility_map_path: str = "cars_eng.json"
+KEYWORDS_ALLOW_BASE_FALLBACK: bool = True
+KEYWORDS_DROP_UNCHANGED: bool = True
+KEYWORDS_MAX_LEN: int = 1000
 
+ALLOWED_LANGUAGES: tuple[str, ...] = (
+    "ua",
+    "ru",
+    "en",
+)
 
 BRAND_MODEL_COLUMNS: tuple[tuple[str, str], ...] = (
     ("Наименование_WestLine", "ru"),

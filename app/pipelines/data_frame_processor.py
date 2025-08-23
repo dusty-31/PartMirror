@@ -1,7 +1,6 @@
 import pandas as pd
 from pandas import DataFrame
 
-from app.core.dataclasses import CompatibilityMap
 from app.core.services.mirror_builder import MirrorBuilder
 
 
@@ -9,10 +8,10 @@ class DataFrameProcessor:
     def __init__(self, builder: MirrorBuilder) -> None:
         self._builder = builder
 
-    def process(self, df: DataFrame, compatibility_map: CompatibilityMap) -> DataFrame:
+    def process(self, df: DataFrame) -> DataFrame:
         all_rows: list[pd.Series] = []
         for _, row in df.iterrows():
-            built = self._builder.build_rows_for(row, compatibility_map)
+            built = self._builder.build_rows_for(row)
             all_rows.extend(built)
 
         if not all_rows:

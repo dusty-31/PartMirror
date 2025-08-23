@@ -1,8 +1,9 @@
 import pandas as pd
 
-from app.core.dataclasses import TripIndex, CompatibilityMap
+from app.core.dataclasses import TripIndex
 from app.core.services.row_transformer import RowTransformer
 from app.core.services.compat_utils import dedupe_models, same_pair, clear_fields
+from app.core.services.model_brand_resolver import ModelBrandResolver
 from app.config import MIRROR_CLEAR_COLUMNS
 
 
@@ -12,18 +13,19 @@ class MirrorBuilder:
     Like "Original" + 0..N "Mirror" rows.
     """
 
-    def __init__(self, transformer: RowTransformer, trip_index: TripIndex) -> None:
+    def __init__(self, transformer: RowTransformer, trip_index: TripIndex, resolver: ModelBrandResolver) -> None:
         self._transformer = transformer
         self._trip_index = trip_index
+        self._resolver = resolver
 
-    def build_rows_for(self, row: pd.Series, compat_map: CompatibilityMap) -> list[pd.Series]:
+    def build_rows_for(self, row: pd.Series) -> list[pd.Series]:
         result: list[pd.Series] = []
 
         current_brand = row.get("Марка", "")
         current_model = row.get("Модель", "")
         raw_compat = row.get("Совместимость", "")
 
-        # 1) Original row
+        # Original row
         orig_row = row.copy()
         orig_row["Тип_записи"] = "Оригінал"
         orig_row = self._transformer.apply_all(
@@ -34,23 +36,23 @@ class MirrorBuilder:
         )
         result.append(orig_row)
 
-        # 2) Mirror rows
+        # Creating mirrors rows
         for model in dedupe_models(raw_compat):
-            brand = compat_map.find_brand_by_model(model)
-            if not brand:
-                continue
-            if same_pair(brand, model, current_brand, current_model):
+            resolved_triplet = self._resolver.resolve(model, allow_base_fallback=False)
+            if not resolved_triplet:
                 continue
 
-            dst_pair = self._trip_index.get_pair(brand, model)
-            if not dst_pair:
+            target_brand = resolved_triplet["en"]["brand"]
+            target_model = resolved_triplet["en"]["model"]
+
+            if same_pair(target_brand, target_model, current_brand, current_model):
                 continue
 
             new_row = row.copy()
-            new_row["Марка"] = brand
-            new_row["Модель"] = model
+            new_row["Марка"] = target_brand
+            new_row["Модель"] = target_model
             if "Категория_BAS" in new_row:
-                new_row["Категория_BAS"] = model
+                new_row["Категория_BAS"] = target_model
 
             new_row["Тип_записи"] = "Дзеркало"
             if "Артикул" in new_row:
@@ -58,12 +60,11 @@ class MirrorBuilder:
                 new_row["Артикул"] = pd.NA
 
             new_row = clear_fields(new_row, MIRROR_CLEAR_COLUMNS)
-
             new_row = self._transformer.apply_all(
                 new_row,
                 src_brand=current_brand,
                 src_model=current_model,
-                dst_pair=dst_pair,
+                dst_pair=resolved_triplet,
             )
             result.append(new_row)
 

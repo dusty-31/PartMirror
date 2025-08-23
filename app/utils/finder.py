@@ -1,4 +1,7 @@
 import re, json, math
+from typing import Optional
+
+from app.config import ALLOWED_LANGUAGES
 
 _SIMILAR = [
     ('A', 'А'), ('B', 'В'), ('C', 'С'), ('E', 'Е'), ('H', 'Н'),
@@ -19,7 +22,7 @@ def _char_class(ch: str) -> str:
     return "(?:" + "|".join(sorted({re.escape(v) for v in variants})) + ")"
 
 
-def _token_to_regex(token: str) -> str:
+def token_to_regex(token: str) -> str:
     SEP = r"[\s\.\-_]*"
     out = []
     for ch in token:
@@ -29,7 +32,7 @@ def _token_to_regex(token: str) -> str:
 
 def _pair_regex(brand: str, model: str) -> re.Pattern:
     SEP_BM = r"(?P<sep>[\s\.\-_]*)"
-    pat = r"(?<!\w)" + _token_to_regex(brand) + SEP_BM + _token_to_regex(model) + r"(?!\w)"
+    pat = r"(?<!\w)" + token_to_regex(brand) + SEP_BM + token_to_regex(model) + r"(?!\w)"
     return re.compile(pat, flags=re.IGNORECASE | re.UNICODE)
 
 
@@ -40,7 +43,7 @@ def load_triplets(path: str):
 
 def build_trip_index(triplets) -> dict:
     idx = {}
-    langs = ("ua", "ru", "en")
+    langs = ALLOWED_LANGUAGES
     for t in triplets:
         for bl in langs:
             b = t[bl]["brand"].lower()
@@ -50,10 +53,10 @@ def build_trip_index(triplets) -> dict:
     return idx
 
 
-def _pair_regex_both(brand: str, model: str):
+def pair_regex_both(brand: str, model: str):
     SEP_BM = r"(?P<sep>[\s\.\-_]*)"
-    pat_bm = r"(?<!\w)" + _token_to_regex(brand) + SEP_BM + _token_to_regex(model) + r"(?!\w)"
-    pat_mb = r"(?<!\w)" + _token_to_regex(model) + SEP_BM + _token_to_regex(brand) + r"(?!\w)"
+    pat_bm = r"(?<!\w)" + token_to_regex(brand) + SEP_BM + token_to_regex(model) + r"(?!\w)"
+    pat_mb = r"(?<!\w)" + token_to_regex(model) + SEP_BM + token_to_regex(brand) + r"(?!\w)"
     rx1 = re.compile(pat_bm, flags=re.IGNORECASE | re.UNICODE)
     rx2 = re.compile(pat_mb, flags=re.IGNORECASE | re.UNICODE)
     return rx1, rx2
@@ -63,8 +66,8 @@ def replace_brand_model_anywhere(name: str, triplets: list, target_lang: str, fo
     if not name:
         return name
     for trip in triplets:
-        for lang in ("ua", "ru", "en"):
-            rx_bm, rx_mb = _pair_regex_both(trip[lang]["brand"], trip[lang]["model"])
+        for lang in ALLOWED_LANGUAGES:
+            rx_bm, rx_mb = pair_regex_both(trip[lang]["brand"], trip[lang]["model"])
             m1 = rx_bm.search(name)
             m2 = rx_mb.search(name)
             m = m1 or m2
@@ -90,8 +93,8 @@ def replace_to_specific_pair(
     if not name:
         return name
     for trip in detect_triplets:
-        for lang in ("ua", "ru", "en"):
-            rx_bm, rx_mb = _pair_regex_both(trip[lang]["brand"], trip[lang]["model"])
+        for lang in ALLOWED_LANGUAGES:
+            rx_bm, rx_mb = pair_regex_both(trip[lang]["brand"], trip[lang]["model"])
             m = rx_bm.search(name) or rx_mb.search(name)
             if not m:
                 continue
@@ -116,24 +119,35 @@ def _has_cyrillic(s: str) -> bool:
     return bool(re.search(_CYR_RANGE, s))
 
 
-def _split_model_tokens(s: str):
-    return [t for t in re.split(r"[\s\.\-_/]+", s) if t]
+def split_model_tokens(s: str):
+    return [token for token in re.split(r"[\s.\-_/]+", s) if token]
 
 
 def _model_regex_full(model_str: str) -> re.Pattern:
-    pat = r"(?<!\w)" + _token_to_regex(model_str) + r"(?!\w)"
+    pat = r"(?<!\w)" + token_to_regex(model_str) + r"(?!\w)"
     return re.compile(pat, flags=re.IGNORECASE | re.UNICODE)
 
 
 def _model_regex_base(model_str: str) -> re.Pattern | None:
-    toks = _split_model_tokens(model_str)
-    if not toks:
+    tokens = split_model_tokens(model_str)
+    if not tokens:
         return None
-    base = toks[0]
+    base = tokens[0]
     if len(base) < 2 and not any(ch.isdigit() for ch in base):
         return None
-    pat = r"(?<!\w)" + _token_to_regex(base) + r"(?!\w)"
+    pat = r"(?<!\w)" + token_to_regex(base) + r"(?!\w)"
     return re.compile(pat, flags=re.IGNORECASE | re.UNICODE)
+
+
+def _replace_model_base_any_language(text: str, trip: dict, dst_model) -> Optional[str]:
+    for language in ALLOWED_LANGUAGES:
+        rx_base = _model_regex_base(trip[language]["model"])
+        if not rx_base:
+            continue
+        m = rx_base.search(text)
+        if m:
+            return text[:m.start()] + dst_model + text[m.end():]
+    return None
 
 
 def replace_model_only(text: str, trip: dict, target_lang: str, strict_full: bool = False) -> str:
@@ -141,8 +155,8 @@ def replace_model_only(text: str, trip: dict, target_lang: str, strict_full: boo
         return text
     dst_model = trip[target_lang]["model"]
 
-    for lang in ("ua", "ru", "en"):
-        rx_full = _model_regex_full(trip[lang]["model"])
+    for language in ALLOWED_LANGUAGES:
+        rx_full = _model_regex_full(trip[language]["model"])
         m = rx_full.search(text)
         if m:
             return text[:m.start()] + dst_model + text[m.end():]
@@ -150,13 +164,9 @@ def replace_model_only(text: str, trip: dict, target_lang: str, strict_full: boo
     if strict_full:
         return text
 
-    for lang in ("ua", "ru", "en"):
-        rx_base = _model_regex_base(trip[lang]["model"])
-        if not rx_base:
-            continue
-        m = rx_base.search(text)
-        if m:
-            return text[:m.start()] + dst_model + text[m.end():]
+    replaced = _replace_model_base_any_language(text, trip, dst_model)
+    if replaced is not None:
+        return replaced
 
     return text
 
@@ -171,7 +181,7 @@ def replace_model_to_specific(
         return text
 
     for trip in detect_triplets:
-        for lang in ("ua", "ru", "en"):
+        for lang in ALLOWED_LANGUAGES:
             rx_full = _model_regex_full(trip[lang]["model"])
             m = rx_full.search(text)
             if m:
@@ -180,14 +190,9 @@ def replace_model_to_specific(
     if strict_full:
         return text
 
-    for trip in detect_triplets:
-        for lang in ("ua", "ru", "en"):
-            rx_base = _model_regex_base(trip[lang]["model"])
-            if not rx_base:
-                continue
-            m = rx_base.search(text)
-            if m:
-                return text[:m.start()] + dst_model_str + text[m.end():]
+    replaced = _replace_model_base_any_language(text, trip, dst_model_str)
+    if replaced is not None:
+        return replaced
 
     return text
 
