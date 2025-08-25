@@ -12,6 +12,8 @@ from app.gateways.excel import ExcelGateway
 from app.adapters.trip_data.resource_trip_data_provider import ResourceTripDataProvider
 from app.adapters.excel.pandas_excel_gateway import PandasExcelGateway
 
+from app.core.enums import ExcelColumns, CustomExcelColumns
+
 
 class Timer:
     def __init__(self, label: str):
@@ -30,7 +32,7 @@ def main() -> None:
     cfg = AppConfig()
 
     with Timer("Triplets: load + index"):
-        trip_provider: TripDataProvider = ResourceTripDataProvider()  # читає app.adapters.tripdata.resources.cars
+        trip_provider: TripDataProvider = ResourceTripDataProvider()
         triplets = trip_provider.load_triplets()
         print("triplets types:", Counter(type(x).__name__ for x in triplets.raw))
         trip_index = trip_provider.build_index(triplets)
@@ -50,7 +52,12 @@ def main() -> None:
         print(f"Output rows: {len(result_df)}")
 
     print("\nРезультат (оригінал + копії):")
-    cols = [c for c in ["Название_позиции_BAS", "Марка", "Модель", "Тип_записи"] if c in result_df.columns]
+    cols = [c for c in [
+        ExcelColumns.BAS_CATEGORY,
+        ExcelColumns.MODEL,
+        ExcelColumns.BRAND,
+        CustomExcelColumns.RECORD_TYPE
+    ] if c in result_df.columns]
     print(result_df[cols] if cols else result_df.head(10))
 
     with Timer("Excel: write result.xlsx"):
