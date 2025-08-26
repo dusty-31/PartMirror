@@ -4,6 +4,7 @@ import re
 import pandas as pd
 
 from app.core.dataclasses import TripIndex, Triplets
+from app.core.enums import ExcelColumns
 from app.settings import (
     BRAND_MODEL_COLUMNS,
     KEYWORDS_ALLOW_BASE_FALLBACK,
@@ -184,14 +185,14 @@ class RowTransformer:
         return self._trip_index.get_pair(src_brand, src_model)
 
     def _replace_brand_model_in_col(
-        self,
-        row: pd.Series,
-        *,
-        column: str,
-        src_trip: dict,
-        dst_pair: Optional[dict],
-        dst_lang: str,
-        force_brand_first: bool = True,
+            self,
+            row: pd.Series,
+            *,
+            column: str,
+            src_trip: dict,
+            dst_pair: Optional[dict],
+            dst_lang: str,
+            force_brand_first: bool = True,
     ) -> pd.Series:
         if column not in row:
             return row
@@ -243,26 +244,17 @@ class RowTransformer:
 
         row = self._kw.normalize_cell(
             row,
-            column="Поисковые_запросы",
+            column=ExcelColumns.KEYWORDS_RU.value,
             dst_brand=ru_brand,
             dst_model=ru_model,
             cyrillic_lang="ru",
             strict_full=bool(dst_pair),
         )
 
-        if "Ключевые_слова_ua" in row.index:
+        if ExcelColumns.KEYWORDS_UA.value in row.index:
             row = self._kw.normalize_cell(
                 row,
-                column="Ключевые_слова_ua",
-                dst_brand=ua_brand,
-                dst_model=ua_model,
-                cyrillic_lang="ua",
-                strict_full=True,
-            )
-        elif "Ключевые_слова_уа" in row.index:
-            row = self._kw.normalize_cell(
-                row,
-                column="Ключевые_слова_уа",
+                column=ExcelColumns.KEYWORDS_UA.value,
                 dst_brand=ua_brand,
                 dst_model=ua_model,
                 cyrillic_lang="ua",
