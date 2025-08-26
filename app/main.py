@@ -1,44 +1,36 @@
-import time
+import logging
 from collections import Counter
 
-from app.config import AppConfig
-from app.core.services.row_transformer import RowTransformer
-from app.core.services.mirror_builder import MirrorBuilder
-from app.core.services.model_brand_resolver import ModelBrandResolver
-from app.pipelines.data_frame_processor import DataFrameProcessor
+from app.settings import AppConfig, setup_logging
+from app.core.services import (
+    RowTransformer,
+    MirrorBuilder,
+    ModelBrandResolver,
+)
+from app.pipelines import DataFrameProcessor
+from app.gateways import TripDataProvider, ExcelGateway
+from app.adapters.trip_data import ResourceTripDataProvider
+from app.adapters.excel import PandasExcelGateway
+from app.core.enums import ExcelColumns, CustomExcelColumns
+from app.utils import Timer
 
-from app.gateways.trip_data_prodiver import TripDataProvider
-from app.gateways.excel import ExcelGateway
-from app.adapters.trip_data.resource_trip_data_provider import ResourceTripDataProvider
-from app.adapters.excel.pandas_excel_gateway import PandasExcelGateway
-
-
-class Timer:
-    def __init__(self, label: str):
-        self.label = label
-
-    def __enter__(self):
-        self.t0 = time.perf_counter()
-        print(f"[START] {self.label}")
-        return self
-
-    def __exit__(self, exc_type, exc, tb):
-        print(f"[DONE ] {self.label} — {time.perf_counter() - self.t0:.2f}s")
+logger = logging.getLogger(__name__)
 
 
 def main() -> None:
     cfg = AppConfig()
+    setup_logging("DEBUG")
 
     with Timer("Triplets: load + index"):
-        trip_provider: TripDataProvider = ResourceTripDataProvider()  # читає app.adapters.tripdata.resources.cars
+        trip_provider: TripDataProvider = ResourceTripDataProvider()
         triplets = trip_provider.load_triplets()
-        print("triplets types:", Counter(type(x).__name__ for x in triplets.raw))
+        logger.debug("Triplets types: %s", Counter(type(x).__name__ for x in triplets.raw))
         trip_index = trip_provider.build_index(triplets)
 
     with Timer("Excel: read input"):
         excel_gateway: ExcelGateway = PandasExcelGateway()
         df = excel_gateway.read(cfg.excel_file, cfg.sheet_name)
-        print(f"Input rows: {len(df)}")
+        logger.info(f"Input rows: {len(df)}")
 
     transformer = RowTransformer(trip_index=trip_index, triplets=triplets)
     resolver = ModelBrandResolver(triplets.raw)
@@ -47,16 +39,22 @@ def main() -> None:
 
     with Timer("Process: build originals + mirrors"):
         result_df = processor.process(df)
-        print(f"Output rows: {len(result_df)}")
+        logger.info(f"Output rows: {len(result_df)}")
 
-    print("\nРезультат (оригінал + копії):")
-    cols = [c for c in ["Название_позиции_BAS", "Марка", "Модель", "Тип_записи"] if c in result_df.columns]
-    print(result_df[cols] if cols else result_df.head(10))
+    logger.info("\nResults (original + mirrors):")
+    cols = [c for c in [
+        ExcelColumns.BAS_CATEGORY.value,
+        ExcelColumns.MODEL.value,
+        ExcelColumns.BRAND.value,
+        CustomExcelColumns.RECORD_TYPE.value
+    ] if c in result_df.columns]
+    preview = result_df[cols] if cols else result_df.head(10)
+    logger.debug("\n%s", preview.to_string(index=True))
 
     with Timer("Excel: write result.xlsx"):
         excel_gateway.write(result_df, "result.xlsx", sheet=cfg.sheet_name)
 
-    print("\nРезультат збережено у файл 'result.xlsx'")
+    logger.info("\nSave result to a file 'result.xlsx'")
 
 
 if __name__ == "__main__":

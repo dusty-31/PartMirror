@@ -1,14 +1,3 @@
-from dataclasses import dataclass
-
-
-@dataclass(frozen=True)
-class AppConfig:
-    excel_file: str = "../test.xlsx"
-    sheet_name: str = "Sheet1"
-
-    # True, if you want to use resources json files
-    use_resource_triplets: bool = True
-
 KEYWORDS_ALLOW_BASE_FALLBACK: bool = True
 KEYWORDS_DROP_UNCHANGED: bool = True
 KEYWORDS_MAX_LEN: int = 1000

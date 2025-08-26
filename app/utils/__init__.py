@@ -5,3 +5,5 @@ from .finder import (
     replace_model_to_specific,
     normalize_keywords_by_script
 )
+
+from .timer import Timer

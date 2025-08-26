@@ -2,9 +2,10 @@ import pandas as pd
 
 from app.core.dataclasses import TripIndex
 from app.core.services.row_transformer import RowTransformer
+from app.core.enums import ExcelColumns, CustomExcelColumns, RecordTypeChoices
 from app.core.services.compat_utils import dedupe_models, same_pair, clear_fields
 from app.core.services.model_brand_resolver import ModelBrandResolver
-from app.config import MIRROR_CLEAR_COLUMNS
+from app.settings import MIRROR_CLEAR_COLUMNS
 
 
 class MirrorBuilder:
@@ -21,13 +22,13 @@ class MirrorBuilder:
     def build_rows_for(self, row: pd.Series) -> list[pd.Series]:
         result: list[pd.Series] = []
 
-        current_brand = row.get("Марка", "")
-        current_model = row.get("Модель", "")
-        raw_compat = row.get("Совместимость", "")
+        current_brand = row.get(ExcelColumns.BRAND.value, "")
+        current_model = row.get(ExcelColumns.MODEL.value, "")
+        raw_compat = row.get(ExcelColumns.COMPATIBILITY.value, "")
 
         # Original row
         orig_row = row.copy()
-        orig_row["Тип_записи"] = "Оригінал"
+        orig_row[CustomExcelColumns.RECORD_TYPE.value] = RecordTypeChoices.ORIGINAL.value
         orig_row = self._transformer.apply_all(
             orig_row,
             src_brand=current_brand,
@@ -49,15 +50,15 @@ class MirrorBuilder:
                 continue
 
             new_row = row.copy()
-            new_row["Марка"] = target_brand
-            new_row["Модель"] = target_model
-            if "Категория_BAS" in new_row:
-                new_row["Категория_BAS"] = target_model
+            new_row[ExcelColumns.BRAND.value] = target_brand
+            new_row[ExcelColumns.MODEL.value] = target_model
+            if ExcelColumns.BAS_CATEGORY.value in new_row:
+                new_row[ExcelColumns.BAS_CATEGORY.value] = target_model
 
-            new_row["Тип_записи"] = "Дзеркало"
-            if "Артикул" in new_row:
-                new_row["Новый_артикул"] = new_row.get("Артикул")
-                new_row["Артикул"] = pd.NA
+            new_row[CustomExcelColumns.RECORD_TYPE.value] = RecordTypeChoices.MIRROR.value
+            if ExcelColumns.ARTICLE in new_row:
+                new_row[ExcelColumns.NEW_ARTICLE.value] = new_row.get(ExcelColumns.ARTICLE.value)
+                new_row[ExcelColumns.ARTICLE.value] = pd.NA
 
             new_row = clear_fields(new_row, MIRROR_CLEAR_COLUMNS)
             new_row = self._transformer.apply_all(

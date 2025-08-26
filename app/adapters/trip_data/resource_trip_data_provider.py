@@ -1,10 +1,16 @@
 import json
-from importlib.resources import files, as_file
+import logging
+from pathlib import Path
+from typing import Optional, Iterator
+
+import app.adapters.trip_data.resources as trip_resources
 
 from app.gateways.trip_data_prodiver import TripDataProvider
 from app.core.dataclasses import TripIndex, Triplets
 from app.utils.finder import build_trip_index
-from app.config import ALLOWED_LANGUAGES
+from app.settings import ALLOWED_LANGUAGES
+
+logger = logging.getLogger(__name__)
 
 
 def _is_triplet_dict(obj: dict) -> bool:
@@ -24,18 +30,29 @@ class ResourceTripDataProvider(TripDataProvider):
     """
     Read all brands json from resource packages.
     """
-    BRANDS_JSON_PACKAGE = "adapters.trip_data.resources"
 
-    def __init__(self, package: str = BRANDS_JSON_PACKAGE) -> None:
-        self._package = package
+    def __init__(self, base_dir: Optional[Path | str] = None):
+        if base_dir is None:
+            package_file = getattr(trip_resources, "__file__", None)
+            if package_file is None:
+                raise RuntimeError(
+                    f"Cannot resolve resource package path: {trip_resources} has no __file__ attribute"
+                )
+            self._base_dir = Path(package_file).resolve().parent
+        else:
+            self._base_dir = Path(base_dir).resolve()
 
-    def _iter_brand_files(self):
-        for entry in files(self._package).iterdir():
-            if entry.is_file() and entry.name.endswith(".json"):
-                yield entry
+        if not self._base_dir.is_dir():
+            raise NotADirectoryError(f"Base directory does not exist: {self._base_dir}")
 
-    @staticmethod
-    def _collect_triplets(obj, out: list[dict]) -> None:
+    def _iter_brand_files(self) -> Iterator[Path]:
+        """
+        Iterate *.json files in the base directory.
+        """
+        yield from sorted(self._base_dir.glob("*.json"))
+
+    @classmethod
+    def _collect_triplets(cls, obj, out: list[dict]) -> None:
         """
         Collect triplets from the object.
         """
@@ -46,19 +63,18 @@ class ResourceTripDataProvider(TripDataProvider):
             return
         if isinstance(obj, list):
             for element in obj:
-                ResourceTripDataProvider._collect_triplets(element, out)
+                cls._collect_triplets(element, out)
             return
         if isinstance(obj, dict):
             for nested_value in obj.values():
-                ResourceTripDataProvider._collect_triplets(nested_value, out)
+                cls._collect_triplets(nested_value, out)
             return
 
     def load_triplets(self) -> Triplets:
         items: list[dict] = []
-        for result in self._iter_brand_files():
-            with as_file(result) as path:
-                print(f"Loading triplets from {path.name}...")
-                data = json.loads(path.read_text(encoding="utf-8"))
+        for path in self._iter_brand_files():
+            logger.info(f"Loading triplets from: {path.name}... ")
+            data = json.loads(path.read_text(encoding="utf-8"))
             self._collect_triplets(data, items)
         return Triplets(raw=items)
 
