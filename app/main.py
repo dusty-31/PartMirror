@@ -2,16 +2,15 @@ import logging
 from collections import Counter
 
 from app.settings import AppConfig, setup_logging
-from app.core.services.row_transformer import RowTransformer
-from app.core.services.mirror_builder import MirrorBuilder
-from app.core.services.model_brand_resolver import ModelBrandResolver
-from app.pipelines.data_frame_processor import DataFrameProcessor
-
-from app.gateways.trip_data_prodiver import TripDataProvider
-from app.gateways.excel import ExcelGateway
-from app.adapters.trip_data.resource_trip_data_provider import ResourceTripDataProvider
-from app.adapters.excel.pandas_excel_gateway import PandasExcelGateway
-
+from app.core.services import (
+    RowTransformer,
+    MirrorBuilder,
+    ModelBrandResolver,
+)
+from app.pipelines import DataFrameProcessor
+from app.gateways import TripDataProvider, ExcelGateway
+from app.adapters.trip_data import ResourceTripDataProvider
+from app.adapters.excel import PandasExcelGateway
 from app.core.enums import ExcelColumns, CustomExcelColumns
 from app.utils import Timer
 
