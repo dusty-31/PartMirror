@@ -53,10 +53,10 @@ def main() -> None:
 
     print("\nРезультат (оригінал + копії):")
     cols = [c for c in [
-        ExcelColumns.BAS_CATEGORY,
-        ExcelColumns.MODEL,
-        ExcelColumns.BRAND,
-        CustomExcelColumns.RECORD_TYPE
+        ExcelColumns.BAS_CATEGORY.value,
+        ExcelColumns.MODEL.value,
+        ExcelColumns.BRAND.value,
+        CustomExcelColumns.RECORD_TYPE.value
     ] if c in result_df.columns]
     print(result_df[cols] if cols else result_df.head(10))
 
