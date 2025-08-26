@@ -1,4 +1,5 @@
 import json
+import logging
 from pathlib import Path
 from typing import Optional, Iterator
 
@@ -7,7 +8,9 @@ import app.adapters.trip_data.resources as trip_resources
 from app.gateways.trip_data_prodiver import TripDataProvider
 from app.core.dataclasses import TripIndex, Triplets
 from app.utils.finder import build_trip_index
-from app.config import ALLOWED_LANGUAGES
+from app.settings import ALLOWED_LANGUAGES
+
+logger = logging.getLogger(__name__)
 
 
 def _is_triplet_dict(obj: dict) -> bool:
@@ -70,7 +73,7 @@ class ResourceTripDataProvider(TripDataProvider):
     def load_triplets(self) -> Triplets:
         items: list[dict] = []
         for path in self._iter_brand_files():
-            print(f"Loading triplets from: {path.name}... ")
+            logger.info(f"Loading triplets from: {path.name}... ")
             data = json.loads(path.read_text(encoding="utf-8"))
             self._collect_triplets(data, items)
         return Triplets(raw=items)

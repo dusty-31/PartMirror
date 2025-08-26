@@ -5,7 +5,7 @@ from app.core.services.row_transformer import RowTransformer
 from app.core.enums import ExcelColumns, CustomExcelColumns, RecordTypeChoices
 from app.core.services.compat_utils import dedupe_models, same_pair, clear_fields
 from app.core.services.model_brand_resolver import ModelBrandResolver
-from app.config import MIRROR_CLEAR_COLUMNS
+from app.settings import MIRROR_CLEAR_COLUMNS
 
 
 class MirrorBuilder:

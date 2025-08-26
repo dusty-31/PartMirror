@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import Optional
 import re
 
-from app.config import ALLOWED_LANGUAGES
+from app.settings import ALLOWED_LANGUAGES
 
 
 @dataclass(frozen=True)

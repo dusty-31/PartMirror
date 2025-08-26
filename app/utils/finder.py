@@ -1,7 +1,7 @@
 import re, json, math
 from typing import Optional
 
-from app.config import ALLOWED_LANGUAGES
+from app.settings import ALLOWED_LANGUAGES
 
 _SIMILAR = [
     ('A', 'А'), ('B', 'В'), ('C', 'С'), ('E', 'Е'), ('H', 'Н'),

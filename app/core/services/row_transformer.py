@@ -4,7 +4,7 @@ import re
 import pandas as pd
 
 from app.core.dataclasses import TripIndex, Triplets
-from app.config import (
+from app.settings import (
     BRAND_MODEL_COLUMNS,
     KEYWORDS_ALLOW_BASE_FALLBACK,
     KEYWORDS_DROP_UNCHANGED,
