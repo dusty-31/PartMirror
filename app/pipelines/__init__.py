@@ -1,1 +1,2 @@
 from .data_frame_processor import DataFrameProcessor
+from .excel_file_pipeline import ExcelFilePipeline
