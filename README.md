@@ -59,7 +59,8 @@ QSettings uses these values to persist UI state (e.g., sidebar width, last direc
 Example command:
 
 ```bash
-    pyinstaller --windowed --name "WLP - PartMirror" \
+    # Use the same name as APP_NAME in gui/config.py for consistency
+    pyinstaller --windowed --name "PartMirror" \
     --icon=gui/icon.icns \
     --add-data "app/adapters/trip_data/resources:app/adapters/trip_data/resources" \
     gui/main.py
