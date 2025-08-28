@@ -1,6 +1,6 @@
 ## PartMirror
 
-Minimal, cross‑platform Excel processing app with PySide6 GUI. The GUI runs your existing pipeline to build product
+Minimal, cross-platform Excel processing app with PySide6 GUI. The GUI runs your existing pipeline to build product
 mirrors and save the result as an `.xlsx`.
 
 Mirrors - a feature that creates duplicates of products with changed categories and other attributes for the BAS system.
