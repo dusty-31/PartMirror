@@ -43,15 +43,25 @@ class MirrorBuilder:
             if not resolved_triplet:
                 continue
 
-            target_brand = resolved_triplet["en"]["brand"]
-            target_model = resolved_triplet["en"]["model"]
+            target_brand, target_model = resolved_triplet["en"].values()
+            target_brand_ua, target_model_ua = resolved_triplet["ua"].values()
+            target_brand_ru, target_model_ru = resolved_triplet["ru"].values()
 
             if same_pair(target_brand, target_model, current_brand, current_model):
                 continue
 
             new_row = row.copy()
+            # Update brand/model in all languages
+            # English
             new_row[ExcelColumns.BRAND.value] = target_brand
             new_row[ExcelColumns.MODEL.value] = target_model
+            # Russian
+            new_row[ExcelColumns.BRAND_CYRILLIC.value] = target_brand_ru
+            new_row[ExcelColumns.MODEL_CYRILLIC.value] = target_model_ru
+            # Ukrainian
+            new_row[ExcelColumns.BRAND_CYRILLIC_UA.value] = target_brand_ua
+            new_row[ExcelColumns.MODEL_CYRILLIC_UA.value] = target_model_ua
+
             if ExcelColumns.BAS_CATEGORY.value in new_row:
                 new_row[ExcelColumns.BAS_CATEGORY.value] = target_model
 

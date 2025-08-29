@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """
 Entry point for the Excel Processor GUI.
 
