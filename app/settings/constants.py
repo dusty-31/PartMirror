@@ -9,14 +9,14 @@ ALLOWED_LANGUAGES: tuple[str, ...] = (
 )
 
 BRAND_MODEL_COLUMNS: tuple[tuple[str, str], ...] = (
-    ("Наименование_WestLine", "ru"),
-    ("Наименование_WestLine_ua", "ua"),
-    ("Наименование_Automotive", "ru"),
-    ("Наименование_Automotive_ua", "ua"),
-    ("Описание_WestLine", "ru"),
-    ("Описание_WestLine_ua", "ua"),
-    ("Описание_Automotive", "ru"),
-    ("Описание_Automotive_ua", "ua"),
+    ("Наименование_WestLine", "en"),
+    ("Наименование_WestLine_ua", "en"),
+    ("Наименование_Automotive", "en"),
+    ("Наименование_Automotive_ua", "en"),
+    ("Описание_WestLine", "en"),
+    ("Описание_WestLine_ua", "en"),
+    ("Описание_Automotive", "en"),
+    ("Описание_Automotive_ua", "en"),
 )
 
 MIRROR_CLEAR_COLUMNS: tuple[str, ...] = (

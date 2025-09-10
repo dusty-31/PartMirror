@@ -14,10 +14,20 @@ class MirrorBuilder:
     Like "Original" + 0..N "Mirror" rows.
     """
 
-    def __init__(self, transformer: RowTransformer, trip_index: TripIndex, resolver: ModelBrandResolver) -> None:
+    def __init__(self, transformer: RowTransformer, trip_index: TripIndex, resolver: ModelBrandResolver, include_record_type: bool = False) -> None:
         self._transformer = transformer
         self._trip_index = trip_index
         self._resolver = resolver
+        self._include_record_type = include_record_type
+
+    def set_include_record_type(self, include: bool) -> None:
+        """
+        Enable or disable the RECORD_TYPE column in the output.
+        
+        Args:
+            include: If True, adds RECORD_TYPE column to distinguish original vs mirror rows
+        """
+        self._include_record_type = include
 
     def build_rows_for(self, row: pd.Series) -> list[pd.Series]:
         result: list[pd.Series] = []
@@ -28,7 +38,8 @@ class MirrorBuilder:
 
         # Original row
         orig_row = row.copy()
-        orig_row[CustomExcelColumns.RECORD_TYPE.value] = RecordTypeChoices.ORIGINAL.value
+        if self._include_record_type:
+            orig_row[CustomExcelColumns.RECORD_TYPE.value] = RecordTypeChoices.ORIGINAL.value
         orig_row = self._transformer.apply_all(
             orig_row,
             src_brand=current_brand,
@@ -65,10 +76,11 @@ class MirrorBuilder:
             if ExcelColumns.BAS_CATEGORY.value in new_row:
                 new_row[ExcelColumns.BAS_CATEGORY.value] = target_model
 
-            new_row[CustomExcelColumns.RECORD_TYPE.value] = RecordTypeChoices.MIRROR.value
-            if ExcelColumns.ARTICLE in new_row:
-                new_row[ExcelColumns.NEW_ARTICLE.value] = new_row.get(ExcelColumns.ARTICLE.value)
-                new_row[ExcelColumns.ARTICLE.value] = pd.NA
+            if self._include_record_type:
+                new_row[CustomExcelColumns.RECORD_TYPE.value] = RecordTypeChoices.MIRROR.value
+
+            new_row[ExcelColumns.NEW_ARTICLE.value] = new_row.get(ExcelColumns.ARTICLE.value)
+            new_row[ExcelColumns.ARTICLE.value] = pd.NA
 
             new_row = clear_fields(new_row, MIRROR_CLEAR_COLUMNS)
             new_row = self._transformer.apply_all(

@@ -27,10 +27,12 @@ class ExcelFilePipeline:
         cfg: Optional[AppConfig] = None,
         excel_gateway: Optional[ExcelGateway] = None,
         trip_provider: Optional[TripDataProvider] = None,
+        include_record_type: bool = False,
     ) -> None:
         self._cfg = cfg or AppConfig()
         self._excel: ExcelGateway = excel_gateway or PandasExcelGateway()
         self._trip_provider: TripDataProvider = trip_provider or ResourceTripDataProvider()
+        self._include_record_type = include_record_type
 
     def process_file(self, input_path: Path, logger: logging.Logger) -> Path:
         if not input_path.exists():
@@ -50,7 +52,7 @@ class ExcelFilePipeline:
         # Build processor
         transformer = RowTransformer(trip_index=trip_index, triplets=triplets)
         resolver = ModelBrandResolver(triplets.raw)
-        builder = MirrorBuilder(transformer=transformer, trip_index=trip_index, resolver=resolver)
+        builder = MirrorBuilder(transformer=transformer, trip_index=trip_index, resolver=resolver, include_record_type=self._include_record_type)
         processor = DataFrameProcessor(builder=builder)
 
         # Process rows

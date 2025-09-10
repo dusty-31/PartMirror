@@ -34,7 +34,8 @@ def main() -> None:
 
     transformer = RowTransformer(trip_index=trip_index, triplets=triplets)
     resolver = ModelBrandResolver(triplets.raw)
-    builder = MirrorBuilder(transformer=transformer, trip_index=trip_index, resolver=resolver)
+    # Set include_record_type=True to add RECORD_TYPE column to distinguish original vs mirror rows
+    builder = MirrorBuilder(transformer=transformer, trip_index=trip_index, resolver=resolver, include_record_type=False)
     processor = DataFrameProcessor(builder=builder)
 
     with Timer("Process: build originals + mirrors"):
