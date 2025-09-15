@@ -161,7 +161,7 @@ class _KeywordNormalizer:
                         changed = True
 
             if drop_unchanged and not changed:
-                continue
+                pass
 
             if deduplicate:
                 key = new_p.casefold()
