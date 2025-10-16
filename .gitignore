@@ -314,6 +314,13 @@ pyrightconfig.json
 pyvenv.cfg
 pip-selfcheck.json
 
+# Mac OS files
+.DS_Store
+
+# results files
+
+app/result.xlsx
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,venv,python,git
 
-.DS_Store
+
+
