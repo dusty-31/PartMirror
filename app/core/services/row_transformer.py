@@ -7,7 +7,6 @@ from app.core.dataclasses import TripIndex, Triplets
 from app.core.enums import ExcelColumns
 from app.settings import (
     BRAND_MODEL_COLUMNS,
-    KEYWORDS_ALLOW_BASE_FALLBACK,
     KEYWORDS_DROP_UNCHANGED,
     KEYWORDS_MAX_LEN,
     ALLOWED_LANGUAGES
@@ -57,38 +56,17 @@ def _replace_pair_once(
     return text
 
 
-def _build_keyword_union_patterns(triplets: list[dict]):
-    by_lang_full: dict[str, set[str]] = {"ua": set(), "ru": set(), "en": set()}
-    by_lang_base: dict[str, set[str]] = {"ua": set(), "ru": set(), "en": set()}
-
-    for triplet in triplets:
-        for language in ALLOWED_LANGUAGES:
-            model = str(triplet[language]["model"]).strip()
-            if model:
-                by_lang_full[language].add(token_to_regex(model))
-            tokens = split_model_tokens(model)
-            if tokens:
-                base = tokens[0]
-                if len(base) >= 2 or any(ch.isdigit() for ch in base):
-                    by_lang_base[language].add(token_to_regex(base))
-
-    def _compile_union(parts: set[str]) -> Optional[re.Pattern]:
-        if not parts:
-            return None
-        union = "(?:" + "|".join(sorted(parts)) + ")"
-        return re.compile(r"(?<!\w)" + union + r"(?!\w)", flags=re.IGNORECASE | re.UNICODE)
-
-    full_pattern = {lang: _compile_union(parts) for lang, parts in by_lang_full.items()}
-    base_pattern = {lang: _compile_union(parts) for lang, parts in by_lang_base.items()}
-    return full_pattern, base_pattern
+@lru_cache(maxsize=4096)
+def _compile_model_regex(model_str: str) -> Optional[re.Pattern]:
+    """Compile a regex to match a specific model name with word boundaries."""
+    if not model_str or not model_str.strip():
+        return None
+    pat = r"(?<!\w)" + token_to_regex(model_str.strip()) + r"(?!\w)"
+    return re.compile(pat, flags=re.IGNORECASE | re.UNICODE)
 
 
 class _KeywordNormalizer:
     _CYRILLIC_RANGE = re.compile(r"[А-Яа-яЁёІіЇїЄєҐґ]")
-
-    def __init__(self, trip_index_raw: dict, triplets_raw: list[dict]) -> None:
-        self._trip_index_raw = trip_index_raw
-        self._full_pattern_by_language, self._base_pattern_by_language = _build_keyword_union_patterns(triplets_raw)
 
     @staticmethod
     def _contains_cyrillic(text: str) -> bool:
@@ -111,13 +89,11 @@ class _KeywordNormalizer:
             row: pd.Series,
             *,
             column: str,
-            dst_brand: str,
-            dst_model: str,
+            src_trip: dict,
+            dst_trip: dict,
             cyrillic_lang: str,
-            strict_full: bool,
             sep_out: str = ", ",
             deduplicate: bool = True,
-            allow_base_fallback: bool = KEYWORDS_ALLOW_BASE_FALLBACK,
             drop_unchanged: bool = KEYWORDS_DROP_UNCHANGED,
             max_len: int = KEYWORDS_MAX_LEN,
     ) -> pd.Series:
@@ -132,36 +108,29 @@ class _KeywordNormalizer:
         if not raw_str:
             return row
 
-        t_dst = self._trip_index_raw.get((str(dst_brand).lower(), str(dst_model).lower()))
-        if not t_dst:
-            return row
-
         parts = [p.strip() for p in re.split(r"\s*,\s*", raw_str) if p.strip()]
         out, seen = [], set()
 
         for p in parts:
-            target_lang = cyrillic_lang if self._contains_cyrillic(p) else "en"
-            dst_model_str = t_dst[target_lang]["model"]
-
-            rx_full = self._full_pattern_by_language.get(target_lang)
-            rx_base = self._base_pattern_by_language.get(target_lang)
-
             new_p = p
             changed = False
 
-            m = rx_full.search(p) if rx_full else None
-            if m:
-                new_p = p[:m.start()] + dst_model_str + p[m.end():]
-                changed = True
-            else:
-                if (not strict_full or allow_base_fallback) and rx_base:
-                    mb = rx_base.search(p)
-                    if mb:
-                        new_p = p[:mb.start()] + dst_model_str + p[mb.end():]
+            # Try to match the source model in each language.
+            # Use the MATCHED language for the replacement so that
+            # English model names stay English and Cyrillic stay Cyrillic.
+            for lang in ALLOWED_LANGUAGES:
+                src_model_str = src_trip[lang]["model"]
+                rx = _compile_model_regex(src_model_str)
+                if rx:
+                    m = rx.search(p)
+                    if m:
+                        dst_model_str = dst_trip[lang]["model"]
+                        new_p = p[:m.start()] + dst_model_str + p[m.end():]
                         changed = True
+                        break
 
             if drop_unchanged and not changed:
-                pass
+                continue
 
             if deduplicate:
                 key = new_p.casefold()
@@ -179,7 +148,7 @@ class RowTransformer:
     def __init__(self, trip_index: TripIndex, triplets: Triplets) -> None:
         self._trip_index = trip_index
         self._triplets = triplets
-        self._kw = _KeywordNormalizer(trip_index.raw, triplets.raw)
+        self._kw = _KeywordNormalizer()
 
     def _get_src_trip(self, src_brand: str, src_model: str) -> dict | None:
         return self._trip_index.get_pair(src_brand, src_model)
@@ -237,28 +206,24 @@ class RowTransformer:
                 force_brand_first=True,
             )
 
-        ru_brand = (dst_pair["ru"]["brand"] if dst_pair else src_brand)
-        ru_model = (dst_pair["ru"]["model"] if dst_pair else src_model)
-        ua_brand = (dst_pair["ua"]["brand"] if dst_pair else src_brand)
-        ua_model = (dst_pair["ua"]["model"] if dst_pair else src_model)
+        # Determine destination triplet for keywords
+        dst_trip = dst_pair if dst_pair else src_trip
 
         row = self._kw.normalize_cell(
             row,
             column=ExcelColumns.KEYWORDS_RU.value,
-            dst_brand=ru_brand,
-            dst_model=ru_model,
+            src_trip=src_trip,
+            dst_trip=dst_trip,
             cyrillic_lang="ru",
-            strict_full=bool(dst_pair),
         )
 
         if ExcelColumns.KEYWORDS_UA.value in row.index:
             row = self._kw.normalize_cell(
                 row,
                 column=ExcelColumns.KEYWORDS_UA.value,
-                dst_brand=ua_brand,
-                dst_model=ua_model,
+                src_trip=src_trip,
+                dst_trip=dst_trip,
                 cyrillic_lang="ua",
-                strict_full=True,
             )
 
         return row
