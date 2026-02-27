@@ -14,7 +14,6 @@ from app.settings import (
 from app.utils.finder import (
     pair_regex_both,
     token_to_regex,
-    split_model_tokens,
 )
 
 
@@ -115,10 +114,17 @@ class _KeywordNormalizer:
             new_p = p
             changed = False
 
-            # Try to match the source model in each language.
-            # Use the MATCHED language for the replacement so that
-            # English model names stay English and Cyrillic stay Cyrillic.
-            for lang in ALLOWED_LANGUAGES:
+            # Determine preferred language order based on the text:
+            # - All-Latin text → try EN first (avoids lookalike Cyrillic matches)
+            # - Has Cyrillic → try cyrillic_lang first
+            # Use the MATCHED language for replacement so model names
+            # stay in their original script.
+            if self._contains_cyrillic(p):
+                lang_order = [cyrillic_lang] + [l for l in ALLOWED_LANGUAGES if l != cyrillic_lang]
+            else:
+                lang_order = ["en"] + [l for l in ALLOWED_LANGUAGES if l != "en"]
+
+            for lang in lang_order:
                 src_model_str = src_trip[lang]["model"]
                 rx = _compile_model_regex(src_model_str)
                 if rx:

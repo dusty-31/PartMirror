@@ -34,8 +34,15 @@ def main() -> None:
 
     transformer = RowTransformer(trip_index=trip_index, triplets=triplets)
     resolver = ModelBrandResolver(triplets.raw)
+    filtered_groups = trip_provider.load_filtered_groups() if hasattr(trip_provider, 'load_filtered_groups') else {}
     # Set include_record_type=True to add RECORD_TYPE column to distinguish original vs mirror rows
-    builder = MirrorBuilder(transformer=transformer, trip_index=trip_index, resolver=resolver, include_record_type=False)
+    builder = MirrorBuilder(
+        transformer=transformer,
+        trip_index=trip_index,
+        resolver=resolver,
+        include_record_type=False,
+        filtered_groups=filtered_groups,
+    )
     processor = DataFrameProcessor(builder=builder)
 
     with Timer("Process: build originals + mirrors"):

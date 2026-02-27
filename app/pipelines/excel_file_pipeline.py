@@ -52,7 +52,14 @@ class ExcelFilePipeline:
         # Build processor
         transformer = RowTransformer(trip_index=trip_index, triplets=triplets)
         resolver = ModelBrandResolver(triplets.raw)
-        builder = MirrorBuilder(transformer=transformer, trip_index=trip_index, resolver=resolver, include_record_type=self._include_record_type)
+        filtered_groups = self._trip_provider.load_filtered_groups() if hasattr(self._trip_provider, 'load_filtered_groups') else {}
+        builder = MirrorBuilder(
+            transformer=transformer,
+            trip_index=trip_index,
+            resolver=resolver,
+            include_record_type=self._include_record_type,
+            filtered_groups=filtered_groups,
+        )
         processor = DataFrameProcessor(builder=builder)
 
         # Process rows

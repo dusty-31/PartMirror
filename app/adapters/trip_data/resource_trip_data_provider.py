@@ -80,3 +80,13 @@ class ResourceTripDataProvider(TripDataProvider):
 
     def build_index(self, triplets: Triplets) -> TripIndex:
         return TripIndex(raw=build_trip_index(triplets.raw))
+
+    def load_filtered_groups(self) -> dict[str, str]:
+        """Load filtered_groups.json mapping model names to group codes."""
+        path = self._base_dir.parent / "filtered_groups.json"
+        if not path.exists():
+            logger.warning("filtered_groups.json not found at %s", path)
+            return {}
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return data
+

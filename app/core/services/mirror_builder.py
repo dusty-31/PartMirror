@@ -1,3 +1,5 @@
+from typing import Optional
+
 import pandas as pd
 
 from app.core.dataclasses import TripIndex
@@ -14,11 +16,19 @@ class MirrorBuilder:
     Like "Original" + 0..N "Mirror" rows.
     """
 
-    def __init__(self, transformer: RowTransformer, trip_index: TripIndex, resolver: ModelBrandResolver, include_record_type: bool = False) -> None:
+    def __init__(
+            self,
+            transformer: RowTransformer,
+            trip_index: TripIndex,
+            resolver: ModelBrandResolver,
+            include_record_type: bool = False,
+            filtered_groups: Optional[dict[str, str]] = None,
+    ) -> None:
         self._transformer = transformer
         self._trip_index = trip_index
         self._resolver = resolver
         self._include_record_type = include_record_type
+        self._filtered_groups: dict[str, str] = filtered_groups or {}
 
     def set_include_record_type(self, include: bool) -> None:
         """
@@ -75,6 +85,12 @@ class MirrorBuilder:
 
             if ExcelColumns.BAS_CATEGORY.value in new_row:
                 new_row[ExcelColumns.BAS_CATEGORY.value] = target_model
+
+            # Set group name and code from filtered_groups.json
+            group_code = self._filtered_groups.get(target_model)
+            if group_code:
+                new_row[ExcelColumns.GROUP_NAME.value] = target_model
+                new_row[ExcelColumns.GROUP_CODE.value] = group_code
 
             if self._include_record_type:
                 new_row[CustomExcelColumns.RECORD_TYPE.value] = RecordTypeChoices.MIRROR.value

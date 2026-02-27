@@ -14,6 +14,8 @@ class ExcelColumns(Enum):
     MODEL_CYRILLIC = "Модель_кириллицей"
     BRAND_CYRILLIC_UA = "Марка_кириллицей_укр"
     MODEL_CYRILLIC_UA = "Модель_кириллицей_укр"
+    GROUP_NAME = "Название_группы"
+    GROUP_CODE = "Код_группы_BAS"
 
 
 class CustomExcelColumns(Enum):

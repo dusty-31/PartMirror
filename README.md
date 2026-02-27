@@ -63,6 +63,7 @@ Example command:
     pyinstaller --windowed --name "PartMirror" \
     --icon=gui/icon.icns \
     --add-data "app/adapters/trip_data/resources:app/adapters/trip_data/resources" \
+    --add-data "app/adapters/trip_data/filtered_groups.json:app/adapters/trip_data/" \
     gui/main.py
 ```
 
