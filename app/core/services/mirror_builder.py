@@ -50,6 +50,12 @@ class MirrorBuilder:
         orig_row = row.copy()
         if self._include_record_type:
             orig_row[CustomExcelColumns.RECORD_TYPE.value] = RecordTypeChoices.ORIGINAL.value
+            
+        group_code = self._filtered_groups.get(current_model)
+        if group_code:
+            orig_row[ExcelColumns.GROUP_NAME.value] = current_model
+            orig_row[ExcelColumns.GROUP_CODE.value] = group_code
+
         orig_row = self._transformer.apply_all(
             orig_row,
             src_brand=current_brand,
